@@ -116,7 +116,7 @@ export const ElderSafetyView: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-3xl border-2 border-teal-500/25 p-5 sm:p-7 shadow-lg space-y-6">
+    <div className="w-full min-w-0 max-w-full overflow-hidden bg-white rounded-3xl border-2 border-teal-500/25 p-4 sm:p-7 shadow-lg space-y-6">
       {/* Top Banner: Header & Location + Voice Controls */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-gradient-to-r from-teal-50/80 via-cyan-50/70 to-emerald-50/80 p-4 sm:p-5 rounded-2xl border border-teal-200/80">
         <div className="flex items-center space-x-3.5">
@@ -132,7 +132,7 @@ export const ElderSafetyView: React.FC = () => {
                 {selectedCommunity.district}
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 font-['Outfit',sans-serif] mt-1">
+            <h2 className="text-lg sm:text-2xl font-extrabold text-slate-900 font-['Outfit',sans-serif] mt-1 leading-tight break-words [overflow-wrap:anywhere]">
               {selectedCommunity.name}
             </h2>
           </div>
@@ -144,7 +144,7 @@ export const ElderSafetyView: React.FC = () => {
           <select
             value={selectedCommunity.id}
             onChange={(e) => setSelectedCommunityId(e.target.value)}
-            className="px-3.5 py-2 rounded-xl border-2 border-teal-500 bg-white font-extrabold text-xs sm:text-sm text-slate-900 shadow-xs cursor-pointer focus:outline-teal-600"
+            className="w-full sm:w-auto min-w-0 max-w-full px-3 py-2 rounded-xl border-2 border-teal-500 bg-white font-extrabold text-xs sm:text-sm text-slate-900 shadow-xs cursor-pointer focus:outline-teal-600"
           >
             {communities.map((c) => (
               <option key={c.id} value={c.id}>
